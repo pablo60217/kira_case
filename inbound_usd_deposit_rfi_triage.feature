@@ -47,7 +47,7 @@ Feature: Inbound USD deposit RFI triage
     Then the RFI Trigger Score exceeds the 85-point threshold
     And the top KYT triggers include "new/unknown counterparty" and "amount deviation"
     And the transaction is marked as "RFI likely" in the Kira Compliance Console
-    And the AI agent automatically sends a Smart Invoice link to "CryptoFX México S.A."
+    And the compliance analyst sends a Smart Invoice link to "CryptoFX México S.A."
     And the transaction status is set to "Awaiting documentation"
     When "TechTrade HK Ltd" submits their company identity, a valid invoice, and source-of-funds documentation
     And the AI agent validates all submitted documents via OCR
